@@ -1,0 +1,3 @@
+[submodule "lib/datatoken-contracts"]
+	path = lib/datatoken-contracts
+	url = https://github.com/dataverse-os/datatoken-contracts
