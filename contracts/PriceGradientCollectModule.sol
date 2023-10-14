@@ -3,8 +3,9 @@ pragma solidity ^0.8.10;
 
 import {IERC20} from "openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
 import {SafeERC20} from "openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
-import {Errors} from "datatoken-contracts/libraries/Errors.sol";
-import {ProfilelessCollectModuleBase} from "datatoken-contracts/core/profileless/base/ProfilelessCollectModuleBase.sol";
+import {Errors} from "datatoken-contracts/contracts/libraries/Errors.sol";
+import {ProfilelessCollectModuleBase} from
+    "datatoken-contracts/contracts/core/profileless/base/ProfilelessCollectModuleBase.sol";
 import "forge-std/Test.sol";
 
 contract PriceGradientCollectModule is ProfilelessCollectModuleBase {

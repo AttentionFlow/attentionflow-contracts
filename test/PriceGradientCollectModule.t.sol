@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.10;
 
-import {ProfilelessDataToken} from "datatoken-contracts/core/profileless/ProfilelessDataToken.sol";
-import {ProfilelessCollectModuleBaseTest} from "../lib/datatoken-contracts/test/profileless/modules/Base.t.sol";
-import {DataTypes} from "datatoken-contracts/libraries/DataTypes.sol";
-import {Constants} from "datatoken-contracts/libraries/Constants.sol";
-import {Errors} from "datatoken-contracts/libraries/Errors.sol";
+import {ProfilelessDataToken} from "datatoken-contracts/contracts/core/profileless/ProfilelessDataToken.sol";
+import {ProfilelessCollectModuleBaseTest} from "datatoken-contracts/test/profileless/modules/Base.t.sol";
+import {DataTypes} from "datatoken-contracts/contracts/libraries/DataTypes.sol";
+import {Constants} from "datatoken-contracts/contracts/libraries/Constants.sol";
+import {Errors} from "datatoken-contracts/contracts/libraries/Errors.sol";
 import {PriceGradientCollectModule} from "../contracts/PriceGradientCollectModule.sol";
 import "forge-std/Test.sol";
 

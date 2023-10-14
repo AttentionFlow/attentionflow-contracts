@@ -1,0 +1,12 @@
+@openzeppelin/=lib/datatoken-contracts/lib/openzeppelin-contracts/
+chainlink/=lib/datatoken-contracts/lib/cybercontracts/lib/chainlink/
+core/=lib/datatoken-contracts/lib/core/contracts/
+cybercontracts/=lib/datatoken-contracts/lib/cybercontracts/
+datatoken-contracts/=lib/datatoken-contracts/
+ds-test/=lib/forge-std/lib/ds-test/src/
+forge-std/=lib/forge-std/src/
+kernel/=lib/datatoken-contracts/lib/cybergraph/lib/kernel/
+lens-core/=lib/datatoken-contracts/lib/core/
+openzeppelin-contracts/=lib/openzeppelin-contracts/
+solady/=lib/datatoken-contracts/lib/cybergraph/lib/kernel/lib/solady/
+solmate/=lib/datatoken-contracts/lib/cybergraph/lib/solmate/

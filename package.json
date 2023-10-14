@@ -1,0 +1,19 @@
+{
+  "name": "attentionflow-contracts",
+  "description": "",
+  "version": "0.0.1",
+  "devDependencies": {},
+  "dependencies": {
+    "solhint": "^3.6.2"
+  },
+  "scripts": {
+    "fork:scroll": "anvil --fork-url https://scroll-sepolia.blockpi.network/v1/rpc/public",
+    "deploy:local": "forge script Deploy --rpc-url=http://127.0.0.1:8545 --broadcast --legacy",
+    "deploy:scroll": "forge script Deploy --rpc-url=https://scroll-sepolia.blockpi.network/v1/rpc/public --broadcast --legacy",
+    "build": "forge build",
+    "test": "forge test",
+    "format": "forge fmt",
+    "lint": "solhint contracts/**/*.sol"
+  },
+  "license": "MIT"
+}
