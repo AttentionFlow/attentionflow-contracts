@@ -1,0 +1,9 @@
+# Ignore all HTML files:
+**/*.html
+**/README.md
+
+/typechain/
+/lib/
+/artifacts/
+/contracts/
+/broadcast/

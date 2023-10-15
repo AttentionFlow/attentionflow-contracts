@@ -6,7 +6,6 @@ import {SafeERC20} from "openzeppelin-contracts/contracts/token/ERC20/utils/Safe
 import {Errors} from "datatoken-contracts/contracts/libraries/Errors.sol";
 import {ProfilelessCollectModuleBase} from
     "datatoken-contracts/contracts/core/profileless/base/ProfilelessCollectModuleBase.sol";
-import "forge-std/Test.sol";
 
 contract PriceGradientCollectModule is ProfilelessCollectModuleBase {
     struct ProfilePublicationData {
@@ -47,12 +46,6 @@ contract PriceGradientCollectModule is ProfilelessCollectModuleBase {
         (uint256 collectLimit, uint256 amount, address currency, address recipient) =
             abi.decode(data, (uint256, uint256, address, address));
 
-        console.log("register pubId: ", pubId);
-        console.log("collectLimit:", collectLimit);
-        console.log("amount:", amount);
-        console.log("currency:", currency);
-        console.log("recipient:", recipient);
-
         if (collectLimit == 0 /*!_isCurrencyWhitelistedByHub(currency) ||*/ || amount == 0) {
             revert Errors.InitParamsInvalid();
         }
@@ -67,7 +60,6 @@ contract PriceGradientCollectModule is ProfilelessCollectModuleBase {
 
         _dataByPublication[pubId] = _profilePublicationData;
 
-        console.log("this.getPublicationData(pubId).amount: ", this.getPublicationData(pubId).amount);
         return data;
     }
 
@@ -115,14 +107,8 @@ contract PriceGradientCollectModule is ProfilelessCollectModuleBase {
 
     function currentPrice(uint256 pubId) public view returns (uint256) {
         uint256 previousPrice = _dataByPublication[pubId].amount;
-        //        uint256 previousPrice = 1e18;
-        //        uint256 sParam = 100 * 1e18;
         uint256 sParam = calculateSquareRoot(previousPrice * 16000 * 1e18) + 1e18;
         uint256 delta = (2 * 1e18 * sParam + 1 * 1e18 * 1e18) * 1e18 / (sParam * sParam);
-        console.log("previousPrice: ", previousPrice);
-        console.log("sParam: ", sParam);
-        console.log("delta: ", delta);
-        console.log("previousPrice + delta: ", previousPrice + delta);
         return previousPrice + delta;
     }
 
